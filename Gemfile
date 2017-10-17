@@ -18,6 +18,8 @@ gem 'devise'
 gem 'cancancan'
 #font awesome
 gem "font-awesome-rails"
+#PG
+gem "pg"
 # pagination
 gem 'kaminari'
 # Use Puma as the app server

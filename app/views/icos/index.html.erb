@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Icos <%=fa_icon "rocket"%></h1>
+
+
+
+  <table class="table table-hover">
+  <thead>
+    <tr>
+
+      <th>Ico Ticker</th>
+      <th>Ico Name</th>
+      <th>Ico Rating</th>
+
+
+      <th>&nbsp;</th>
+      <th>&nbsp;</th>
+      <th>&nbsp;</th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+  <%  @icos.each do |ico| %>
+
+      <tr>
+
+        <td><%= ico.ico_ticker %></td>
+        <td><%= ico.ico_name %></td>
+        <td><%= ico.ico_rating %></td>
+
+        <td><%= link_to 'Show', ico, class: "btn btn-primary" %></td>
+        <td><%= link_to 'Edit', edit_ico_path(ico),class: "btn btn-info" %></td>
+        <td><%= link_to 'Delete', ico_path(ico),  method: :delete, data: { confirm: 'Are you sure?' },class: "btn btn-danger" %></td>
+      </tr>
+    <% end %>
+
+  </tbody>
+</table>
+
+  <%= paginate @icos %>
+

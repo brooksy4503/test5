@@ -1,0 +1,211 @@
+<p id="notice"><%= notice %></p>
+  <h1>Ico</h1>
+
+
+  <!--beginning of new row-->
+  <div class="row">
+
+    <div class="col-xs-4 form-group">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Ico Ticker</h3>
+        </div>
+        <div class="panel-body">
+          <%= @ico.ico_ticker %>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-xs-4 form-group">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Ico Name</h3>
+        </div>
+        <div class="panel-body">
+          <%= @ico.ico_name %>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-xs-4 form-group">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Ico Rating</h3>
+        </div>
+        <div class="panel-body">
+          <%= @ico.ico_rating %>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+
+  <!--beginning of new row-->
+  <div class="row">
+
+    <div class="col-xs-4 form-group">
+      <div class="panel panel-success">
+        <div class="panel-heading">
+          <h3 class="panel-title">Idea Evaluation</h3>
+        </div>
+        <div class="panel-body">
+          <%= @ico.idea_evaluation_type  %>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-xs-4 form-group">
+      <div class="panel panel-success">
+        <div class="panel-heading">
+          <h3 class="panel-title">Team Evaluation</h3>
+        </div>
+        <div class="panel-body">
+          <%= @ico.team_evaluation_type  %>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-xs-4 form-group">
+      <div class="panel panel-success">
+        <div class="panel-heading">
+          <h3 class="panel-title">Advisors Evaluation</h3>
+        </div>
+        <div class="panel-body">
+          <%= @ico.advisors_evaluation_type  %>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+
+  <!--beginning of new row-->
+  <div class="row">
+
+    <div class="col-xs-4 form-group">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title">Alpha/Beta Evaluation</h3>
+        </div>
+        <div class="panel-body">
+          <%= @ico.alpha_beta_evaluation_type  %>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-xs-4 form-group">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title">Token Metrics</h3>
+        </div>
+        <div class="panel-body">
+          <%= @ico.token_metrics_evaluation_type  %>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-xs-4 form-group">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title">Platform or App</h3>
+        </div>
+        <div class="panel-body">
+          <%= @ico.platform_app_evaluation_type  %>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+
+  <!--beginning of new row-->
+  <div class="row">
+
+    <div class="col-xs-4 form-group">
+      <div class="panel panel-warning">
+        <div class="panel-heading">
+          <h3 class="panel-title">Website Evaluation</h3>
+        </div>
+        <div class="panel-body">
+          <%= @ico.website_evaluation_type  %>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-xs-4 form-group">
+      <div class="panel panel-warning">
+        <div class="panel-heading">
+          <h3 class="panel-title">Github Evaluation</h3>
+        </div>
+        <div class="panel-body">
+          <%= @ico.github_evaluation_type  %>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-xs-4 form-group">
+      <div class="panel panel-warning">
+        <div class="panel-heading">
+          <h3 class="panel-title">Social Evaluation</h3>
+        </div>
+        <div class="panel-body">
+          <%= @ico.social_evaluation_type  %>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+
+  <!--beginning of new row-->
+  <div class="row">
+
+    <div class="col-xs-4 form-group">
+      <div class="panel panel-danger">
+        <div class="panel-heading">
+          <h3 class="panel-title">Bounty Evaluation</h3>
+        </div>
+        <div class="panel-body">
+          <%= @ico.bounty_evaluation_type  %>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-xs-4 form-group">
+      <div class="panel panel-danger">
+        <div class="panel-heading">
+          <h3 class="panel-title">Celebrity Evaluation</h3>
+        </div>
+        <div class="panel-body">
+          <%= @ico.celebrity_evaluation_type  %>
+        </div>
+      </div>
+
+    </div>
+
+
+    </div>
+
+
+
+
+<%= link_to 'Edit', edit_ico_path(@ico), class: "btn btn-info" %> |
+<%= link_to 'Back', icos_path, class: "btn btn-warning" %>

@@ -48,3 +48,7 @@ th {
 .center {
   text-align: center;
 }
+
+.table tbody > tr > td.vert-aligned {
+  vertical-align: middle;
+}

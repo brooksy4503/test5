@@ -1,4 +1,14 @@
 <p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-xs-12">
+    <% flash.each do |name, msg| %>
+        <div class="alert alert-<%= name %>" id="flash">
+          <a href="#" class="close" data-dismiss="alert">&#215;</a>
+          <%= msg %>
+        </div>
+    <% end %>
+  </div>
+</div>
 
 <h1>Icos <%=fa_icon "rocket"%></h1>
 

@@ -1,11 +1,36 @@
 <p id="notice"><%= notice %></p>
+
+<div class="row">
+  <div class="col-xs-12">
+    <% flash.each do |name, msg| %>
+        <div class="alert alert-<%= name %>" id="flash">
+          <a href="#" class="close" data-dismiss="alert">&#215;</a>
+          <%= msg %>
+        </div>
+    <% end %>
+  </div>
+</div>
+
   <h1>Ico</h1>
+<div class="pull-right">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">Actions</h3>
+    </div>
+    <div class="panel-body">
+      <div class="actions center">
+        <%= link_to 'Edit', edit_ico_path(@ico), class: "btn btn-info" %> |
+        <%= link_to 'Back', icos_path, class: "btn btn-warning" %>
+      </div>
+    </div>
+  </div>
+</div>
 
 
   <!--beginning of new row-->
   <div class="row">
 
-    <div class="col-xs-4 form-group">
+    <div class="col-xs-3 form-group">
       <div class="panel panel-primary">
         <div class="panel-heading">
           <h3 class="panel-title">Ico Ticker</h3>
@@ -17,7 +42,7 @@
 
     </div>
 
-    <div class="col-xs-4 form-group">
+    <div class="col-xs-3 form-group">
       <div class="panel panel-primary">
         <div class="panel-heading">
           <h3 class="panel-title">Ico Name</h3>
@@ -29,7 +54,7 @@
 
     </div>
 
-    <div class="col-xs-4 form-group">
+    <div class="col-xs-3 form-group">
       <div class="panel panel-primary">
         <div class="panel-heading">
           <h3 class="panel-title">Ico Rating</h3>
@@ -38,8 +63,6 @@
           <%= @ico.ico_rating %>
         </div>
       </div>
-
-
     </div>
 
   </div>
@@ -49,7 +72,7 @@
   <!--beginning of new row-->
   <div class="row">
 
-    <div class="col-xs-4 form-group">
+    <div class="col-xs-3 form-group">
       <div class="panel panel-success">
         <div class="panel-heading">
           <h3 class="panel-title">Idea Evaluation</h3>
@@ -61,7 +84,7 @@
 
     </div>
 
-    <div class="col-xs-4 form-group">
+    <div class="col-xs-3 form-group">
       <div class="panel panel-success">
         <div class="panel-heading">
           <h3 class="panel-title">Team Evaluation</h3>
@@ -73,7 +96,7 @@
 
     </div>
 
-    <div class="col-xs-4 form-group">
+    <div class="col-xs-3 form-group">
       <div class="panel panel-success">
         <div class="panel-heading">
           <h3 class="panel-title">Advisors Evaluation</h3>
@@ -93,7 +116,7 @@
   <!--beginning of new row-->
   <div class="row">
 
-    <div class="col-xs-4 form-group">
+    <div class="col-xs-3 form-group">
       <div class="panel panel-info">
         <div class="panel-heading">
           <h3 class="panel-title">Alpha/Beta Evaluation</h3>
@@ -105,7 +128,7 @@
 
     </div>
 
-    <div class="col-xs-4 form-group">
+    <div class="col-xs-3 form-group">
       <div class="panel panel-info">
         <div class="panel-heading">
           <h3 class="panel-title">Token Metrics</h3>
@@ -117,7 +140,7 @@
 
     </div>
 
-    <div class="col-xs-4 form-group">
+    <div class="col-xs-3 form-group">
       <div class="panel panel-info">
         <div class="panel-heading">
           <h3 class="panel-title">Platform or App</h3>
@@ -135,7 +158,7 @@
   <!--beginning of new row-->
   <div class="row">
 
-    <div class="col-xs-4 form-group">
+    <div class="col-xs-3 form-group">
       <div class="panel panel-warning">
         <div class="panel-heading">
           <h3 class="panel-title">Website Evaluation</h3>
@@ -147,7 +170,7 @@
 
     </div>
 
-    <div class="col-xs-4 form-group">
+    <div class="col-xs-3 form-group">
       <div class="panel panel-warning">
         <div class="panel-heading">
           <h3 class="panel-title">Github Evaluation</h3>
@@ -159,7 +182,7 @@
 
     </div>
 
-    <div class="col-xs-4 form-group">
+    <div class="col-xs-3 form-group">
       <div class="panel panel-warning">
         <div class="panel-heading">
           <h3 class="panel-title">Social Evaluation</h3>
@@ -177,7 +200,7 @@
   <!--beginning of new row-->
   <div class="row">
 
-    <div class="col-xs-4 form-group">
+    <div class="col-xs-3 form-group">
       <div class="panel panel-danger">
         <div class="panel-heading">
           <h3 class="panel-title">Bounty Evaluation</h3>
@@ -189,7 +212,7 @@
 
     </div>
 
-    <div class="col-xs-4 form-group">
+    <div class="col-xs-3 form-group">
       <div class="panel panel-danger">
         <div class="panel-heading">
           <h3 class="panel-title">Celebrity Evaluation</h3>
@@ -203,9 +226,3 @@
 
 
     </div>
-
-
-
-
-<%= link_to 'Edit', edit_ico_path(@ico), class: "btn btn-info" %> |
-<%= link_to 'Back', icos_path, class: "btn btn-warning" %>

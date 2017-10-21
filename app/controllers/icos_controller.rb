@@ -67,8 +67,10 @@ class IcosController < ApplicationController
 
     respond_to do |format|
       if @ico.save
-        # format.html { redirect_to @ico, notice: 'Ico was successfully created.' }
-        format.html { redirect_to icos_path(@icos), notice: 'Ico was successfully created.' }
+         #format.html { redirect_to @ico, notice: 'Ico was successfully created.' }
+         format.html { redirect_to @ico }
+         flash[:success] = "Ico was created successfully!"
+        #format.html { redirect_to icos_path(@icos), notice: 'Ico was successfully created.' }
         format.json { render :show, status: :created, location: @ico }
       else
          #byebug
@@ -97,7 +99,9 @@ class IcosController < ApplicationController
 
       if @ico.update(ico_params)
         #format.html { redirect_to @ico, notice: 'Ico was successfully updated.' }
-        format.html { redirect_to icos_path(@icos), notice: 'Ico was successfully updated.' }
+        format.html { redirect_to @ico}
+        flash[:success] = "Ico was updated successfully!"
+        #format.html { redirect_to icos_path(@icos), notice: 'Ico was successfully updated.' }
         format.json { render :show, status: :ok, location: @ico }
       else
         format.html { render :edit }
@@ -111,7 +115,9 @@ class IcosController < ApplicationController
   def destroy
     @ico.destroy
     respond_to do |format|
-      format.html { redirect_to icos_url, notice: 'Ico was successfully destroyed.' }
+      #format.html { redirect_to icos_url, notice: 'Ico was successfully destroyed.' }
+      format.html { redirect_to icos_url }
+      flash[:success] = "Ico was successfully deleted!"
       format.json { head :no_content }
     end
   end

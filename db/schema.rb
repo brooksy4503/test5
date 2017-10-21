@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171015085847) do
+ActiveRecord::Schema.define(version: 20171021022106) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "icos", force: :cascade do |t|
     t.string "ico_ticker"
@@ -29,6 +32,7 @@ ActiveRecord::Schema.define(version: 20171015085847) do
     t.integer "celebrity_evaluation_type", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["ico_ticker"], name: "index_icos_on_ico_ticker", unique: true
   end
 
   create_table "users", force: :cascade do |t|

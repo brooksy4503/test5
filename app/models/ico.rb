@@ -4,8 +4,19 @@ class Ico < ApplicationRecord
   validates :ico_name, presence: true
   validates :ico_rating, presence: true
 
+  validates_uniqueness_of :ico_ticker, :case_sensitive => false
+
+  before_save :uppercase_ico_ticker, :uppercase_ico_name
+
   default_scope -> { order(updated_at: :desc) }
 
+  def uppercase_ico_ticker
+    ico_ticker.upcase!
+  end
+
+  def uppercase_ico_name
+    ico_name.upcase!
+  end
 
 
 

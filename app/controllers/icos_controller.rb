@@ -1,6 +1,8 @@
 class IcosController < ApplicationController
   before_action :set_ico, only: [:show, :edit, :update, :destroy]
 
+
+
   # GET /icos
   # GET /icos.json
   def index
@@ -65,7 +67,8 @@ class IcosController < ApplicationController
 
     respond_to do |format|
       if @ico.save
-        format.html { redirect_to @ico, notice: 'Ico was successfully created.' }
+        # format.html { redirect_to @ico, notice: 'Ico was successfully created.' }
+        format.html { redirect_to icos_path(@icos), notice: 'Ico was successfully created.' }
         format.json { render :show, status: :created, location: @ico }
       else
          #byebug
@@ -93,7 +96,8 @@ class IcosController < ApplicationController
       @celebrity_evaluation_types = Ico.celebrity_evaluation_types
 
       if @ico.update(ico_params)
-        format.html { redirect_to @ico, notice: 'Ico was successfully updated.' }
+        #format.html { redirect_to @ico, notice: 'Ico was successfully updated.' }
+        format.html { redirect_to icos_path(@icos), notice: 'Ico was successfully updated.' }
         format.json { render :show, status: :ok, location: @ico }
       else
         format.html { render :edit }

@@ -4,7 +4,9 @@
 
 @import "font-awesome";
 
-body { padding-bottom: 70px; }
+
+body { padding-bottom: 70px;
+}
 
 
 footer {
@@ -50,5 +52,6 @@ footer {
 }
 
 .table tbody > tr > td.vert-aligned {
+  color: coral;
   vertical-align: middle;
 }

@@ -236,6 +236,34 @@
       </div>
     </div>
 
+    <!--Beginning of new row-->
+    <div class="row">
+      <div class="col-xs-3 form-group">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Main Sale Begins</h3>
+          </div>
+          <div class="panel-body">
+
+            <%= form.date_field(:ico_main_sale_open) %>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-3 form-group">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Main Sale Ends</h3>
+          </div>
+          <div class="panel-body">
+
+            <%= form.date_field(:ico_main_sale_close) %>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
 
 
 <% end %>

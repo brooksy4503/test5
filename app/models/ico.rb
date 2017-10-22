@@ -3,12 +3,15 @@ class Ico < ApplicationRecord
   validates :ico_ticker, presence: true
   validates :ico_name, presence: true
   validates :ico_rating, presence: true
+  validates :ico_main_sale_open, presence: true
+  validates :ico_main_sale_close, presence: true
 
   validates_uniqueness_of :ico_ticker, :case_sensitive => false
 
-  before_save :uppercase_ico_ticker, :uppercase_ico_name
+  before_save :uppercase_ico_ticker, :uppercase_ico_name, :check_ico_main_sale
 
-  default_scope -> { order(updated_at: :desc) }
+  # default_scope -> { order(updated_at: :desc) }
+  default_scope -> { order(ico_main_sale_open: :desc) }
 
   def uppercase_ico_ticker
     ico_ticker.upcase!
@@ -16,6 +19,16 @@ class Ico < ApplicationRecord
 
   def uppercase_ico_name
     ico_name.upcase!
+  end
+
+  def check_ico_main_sale
+    if ico_main_sale_open.nil?
+      ico_main_sale_open == now
+    end
+    if ico_main_sale_close.nil?
+      ico_main_sale_open == now
+    end
+
   end
 
 

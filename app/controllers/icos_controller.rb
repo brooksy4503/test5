@@ -130,7 +130,7 @@ class IcosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def ico_params
-      params.require(:ico).permit(:ico_ticker, :ico_name, :ico_rating, :idea_evalution_type, :team_evaluation_type, :advisors_evaluation_type, :alpha_beta_evaluation_type, :token_metrics_evaluation_type, :platform_app_evaluation_type, :website_evaluation_type, :github_evaluation_type, :social_evaluation_type, :bounty_evaluation_type, :celebrity_evaluation_type)
+      params.require(:ico).permit(:ico_ticker, :ico_name, :ico_rating, :idea_evalution_type, :team_evaluation_type, :advisors_evaluation_type, :alpha_beta_evaluation_type, :token_metrics_evaluation_type, :platform_app_evaluation_type, :website_evaluation_type, :github_evaluation_type, :social_evaluation_type, :bounty_evaluation_type, :celebrity_evaluation_type, :ico_main_sale_open, :ico_main_sale_close)
 
       # params.fetch(:ico {})
     end

@@ -11,7 +11,9 @@ class Ico < ApplicationRecord
   before_save :uppercase_ico_ticker, :uppercase_ico_name, :check_ico_main_sale
 
   # default_scope -> { order(updated_at: :desc) }
-  default_scope -> { order(ico_main_sale_open: :desc) }
+  # default_scope -> { order(ico_main_sale_open: :desc) }
+  # default_scope -> { order(ico_rating: :desc) }
+  scope :ico_rating, -> {order(ico_rating: :desc)}
 
   def uppercase_ico_ticker
     ico_ticker.upcase!

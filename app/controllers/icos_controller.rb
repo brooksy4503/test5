@@ -9,6 +9,7 @@ class IcosController < ApplicationController
     #@icos = Ico.all
     #@icos = Ico.page params[:page]
     @icos = Ico.page(params[:page]).per(10)
+    #@icos = Ico.ico_rating.page(params[:page]).per(10)
   end
 
   # GET /icos/1
